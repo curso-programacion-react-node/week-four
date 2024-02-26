@@ -6,7 +6,8 @@ export default function Entrance() {
     const givePermission = () => {
         if (age >= 18) {
             return "Puede Entrar"
-        } else {
+        } 
+        else {
             return "No Puede Entrar"
         }
     }

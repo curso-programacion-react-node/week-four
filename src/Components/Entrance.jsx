@@ -4,9 +4,12 @@ export default function Entrance() {
     const [age, setAge] = useState(18)
 
     const givePermission = () => {
-        if (age >= 18) {
+        if (age > 18) {
             return "Puede Entrar"
         } 
+        else if (age === 18) {
+            return "En el límite"
+        }
         else {
             return "No Puede Entrar"
         }

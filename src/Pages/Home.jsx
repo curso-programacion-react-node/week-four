@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 export default function Home() {
     const [tasks, setTasks] = useState([])
     const [task, setTask] = useState(null)
-    const [token, setToken] = useState(null)
 
     const [responsable, setResponsable] = useState("")
     const [description, setDescription] = useState("")
@@ -41,8 +40,7 @@ export default function Home() {
         const response = await fetch("https://api-tasks.vercel.app/api/task", {
             method: "POST",
             headers: {
-                'Content-Type': 'application/json',
-                'Authorization': "Bearer " + token
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify({
                 responsable: responsable,
